@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext"],
+
+        "target": "ES6", //! ES3 en düsük JS sürümüne göre düzenlemeler yapiyor. Detayli bilgi w3schools.com´da.
+        
+        "strict": true,
+        
+        "module": "CommonJS",
+        
+        "allowJs": false,
+        
+        "checkJs": false,
+        
+        "moduleResolution": "Node",
+        
+        "esModuleInterop": true,
+
+        "allowSyntheticDefaultImports": true,
+        
+        "outDir": "dist",
+        
+        "rootDir": "src",
+
+        
+        
+        // "declaration": true, //! bu komut true ise bununla birlikte d.ts dosyalari da geliyor.
+    },
+        "include": ["src/**/*"], //! **; src´nin icinde ki herseyi(file oder folder). *; **´nin oldugu yerde folder varsa bunun icinde ki hersey.
+        "exclude": ["node_modules"] //! exclude; bu dosyalari derleme demektir.
+}
