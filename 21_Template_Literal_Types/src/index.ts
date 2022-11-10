@@ -1,0 +1,1 @@
+//! Google.com da Ts playground yazip gelen editör sayfasinda bu videonun icerini calisabilirsin!

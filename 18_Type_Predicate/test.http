@@ -1,0 +1,23 @@
+POST http://localhost:4000/add
+
+Content-Type: application/json
+
+{
+    "text": "Ekmek almaya git!"
+}
+
+Bir satir altda ki üc tane sembol üsttekileri alttakilerden ayirmak icin kullaniliyor.
+###
+
+
+GET http://localhost:4000/todos
+
+###
+
+
+DELETE http://localhost:4000/delete/0.9502086267622172
+
+
+###
+
+POST http://localhost:4000/toggleTodo/0.7335101475460386
