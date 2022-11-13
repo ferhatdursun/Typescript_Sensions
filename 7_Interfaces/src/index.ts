@@ -103,8 +103,8 @@ const obj: IStudent = {
     return {
       isim: this.isim,
       sinif: this.sinif,
-      soyad: this.soyad,
+      soyad: this.soyad
       //! Bu objeler de eger ki arrow function kullanmiyorsak, normal function kullaniyorsak burada this bu objeyi(IStudent) temsil eder.
-    };
-  },
-};
+    }
+  }
+}

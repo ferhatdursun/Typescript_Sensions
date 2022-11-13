@@ -20,5 +20,4 @@ app.post("/toggleTodo/:id", toggleTodo)
 
 app.listen(4000, () => {
     console.log("server is up on http://localhost:4000");
-    
 });
