@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"], //! ESNext JS'nin her zaman son versiyonudur. Burada ESNext'in yerine baska birsey secersek TS kodumuz JS'nin o versiyona cevrilir. Eger tarayicida calisacaksak Buraya "ESNext" den sonra "DOM" yaziyoruz.
+    "lib": ["ESNext", "DOM"], //! ESNext JS'nin her zaman son versiyonudur. Burada ESNext'in yerine baska birsey secersek TS kodumuz JS'nin o versiyona cevrilir. Eger tarayicida calisacaksak Buraya "ESNext" den sonra "DOM" yaziyoruz.
 
     "target": "ES6", //! target icin secilenler kodun JS diline cevrilecek olan sürümüyle alakalidir. ES3 icin var a=5 index.js de ayni sekilde görünüyor ama ES6 da index.js'de const a=6 olarak görünüyor.
 

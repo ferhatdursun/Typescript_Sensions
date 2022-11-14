@@ -3,6 +3,9 @@
 let myname = "kadir";
 //? myname = 25
 //! Eger üstte string olan myname'i burada tekrardan number olarak tanimlamak istersek Typescript bize hata döndürüyor.
+//! let olanlar ayni type da yeniden tanimlanabilir. Ama const olanlar degistirilemezdir. 
+//! Mesela altta ki const ferhat = "yes", const ferhat = "Ahmet" olmaz!!!
+
 
 const ferhat = "yes";
 //! Burada ferhat'in Type'ni const ile kesin olarak belirledik ve daha sonra ferhat = "24" veya = "Ali" dahi yapamayiz.
@@ -66,7 +69,7 @@ let g: undefined = undefined;
 
 //////////////////////////////?
 
-const Person: {
+const Person: { //! Buradan acilan objenin adi Type objesidir.
   isim: string;
   yas: number;
   sehir: string;
@@ -75,7 +78,7 @@ const Person: {
   isim: "Ferhat",
   yas: 24,
   sehir: "Dortmund",
-  bilmem: "bilmem",
+  bilmem: "bilmem", //! bilmem Type object de tanimlanan 3 tanesinden birisi olabilirken. sehir, yas ve isim tanimlandiklari type olarak her degeri alabilirler.
 };
 
 //! Person.isim = 23, üst tarafta string olarak tanimlandigi icin burada isim'i number olarak tanimlamaya izin vermiyor.
@@ -115,3 +118,46 @@ const myDizi: [string, string, number] = ["ferhat", "Dursun", 12]; //!Bunlar Tup
 const [isim, soyad, yas] = myDizi; //! burada isim = string, soyad = string, yas = number
 
 myDizi[2].toFixed; //! Type'i number. myDizi de 2'inci
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+let myname2: string | number;
+
+function change2() {
+    myname2 = "asd",
+    myname2 = 12;  
+}
+
+
+function silCheck() {
+  if (b instanceof HTMLInputElement)
+    b.COMMENT_NODE
+  }
+
+let sila: string = "a"
+
+let silnumber: number = 5
+
+let silboolean: boolean = true
+
+let silundefiend: undefined = undefined
+
+let silsymbol: symbol = Symbol()
+
+
+const silPerson = {
+  silisim: "Ferhat",
+  silSoyisim: "Dursun",
+  silKanal: "Youtube"
+}
+
+
