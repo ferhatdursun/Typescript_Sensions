@@ -3,9 +3,8 @@
 let myname = "kadir";
 //? myname = 25
 //! Eger üstte string olan myname'i burada tekrardan number olarak tanimlamak istersek Typescript bize hata döndürüyor.
-//! let olanlar ayni type da yeniden tanimlanabilir. Ama const olanlar degistirilemezdir. 
+//! let olanlar ayni type da yeniden tanimlanabilir. Ama const olanlar degistirilemezdir.
 //! Mesela altta ki const ferhat = "yes", const ferhat = "Ahmet" olmaz!!!
-
 
 const ferhat = "yes";
 //! Burada ferhat'in Type'ni const ile kesin olarak belirledik ve daha sonra ferhat = "24" veya = "Ali" dahi yapamayiz.
@@ -69,7 +68,8 @@ let g: undefined = undefined;
 
 //////////////////////////////?
 
-const Person: { //! Buradan acilan objenin adi Type objesidir.
+const Person: {
+  //! Buradan acilan objenin adi Type objesidir.
   isim: string;
   yas: number;
   sehir: string;
@@ -95,15 +95,21 @@ isimler = "Ahmet";
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+const kaliciPerson = {
+  isim: "Ferhat",
+  soyisim: "Dursun",
+  kanal: "kanal" as "youtube" | "izlesene" | "stackoverflow", //! as burada hemen solunda ki "kanal"in youtube, izlesene ve stackoverflow gibi kullanilabilecegini gösteriyor.
+};
+
 //? DIZI TYPELARI TANIMLAMA ?//
 
 let örnek: any = 5;
 
-const soncay = örnek as number; //! Burada as sayesinde soncay'in number oldugunu söylemis olduk.
+const soncay = örnek as number; //! Burada as sayesinde soncay'in number oldugunu söylemis olduk. as Gibi demek. Yani bu bunun gibi.
 
 const dizi = []; //! Type'i anydir. Dizinin icinde herhangi birsey tanimlanmamistir. Icerisin de hersey tanimlanabilir.
 
-const dizi2: string[] = []; //? Bu sekilde any olani string dizisi olarak tanimlayabiliriz.
+const dizi2: string[] = []; //? Bu sekilde any olani string dizisi olarak tanimlayabiliriz. TRILUXDS´de bu sekilde kullaniliyor.
 
 const dizi3 = [] as number[]; //? Bu sekilde de Type'i any olan bir degeri number'a cevirebiliriz.
 
@@ -119,45 +125,38 @@ const [isim, soyad, yas] = myDizi; //! burada isim = string, soyad = string, yas
 
 myDizi[2].toFixed; //! Type'i number. myDizi de 2'inci
 
-
-
-
-
-
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
 
 let myname2: string | number;
 
 function change2() {
-    myname2 = "asd",
-    myname2 = 12;  
+  (myname2 = "asd"), (myname2 = 12);
 }
-
 
 function silCheck() {
-  if (b instanceof HTMLInputElement)
-    b.COMMENT_NODE
-  }
-
-let sila: string = "a"
-
-let silnumber: number = 5
-
-let silboolean: boolean = true
-
-let silundefiend: undefined = undefined
-
-let silsymbol: symbol = Symbol()
-
-
-const silPerson = {
-  silisim: "Ferhat",
-  silSoyisim: "Dursun",
-  silKanal: "Youtube"
+  if (b instanceof HTMLInputElement) b.COMMENT_NODE;
 }
 
+let sila: string = "a";
 
+let silnumber: number = 5;
+
+let silboolean: boolean = true;
+
+let silundefiend: undefined = undefined;
+
+let silsymbol: symbol = Symbol();
+
+const yeniPerson: {
+  silisim: string;
+  silSoyisim: string;
+  silYas: number;
+} = {
+  silisim: "Ferhat",
+  silSoyisim: "Dursun",
+  silYas: 30,
+};
+
+let silSehirler: "Bartin" | "Ankara" | "Istanbul" | "Dortmund";
+
+const stringdizisi: string[] = [];
