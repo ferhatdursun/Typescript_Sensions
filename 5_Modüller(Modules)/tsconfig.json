@@ -22,6 +22,9 @@
 
     "declaration": true,
 
+    "noUnusedParameters": true
+
+    //! "noUnusedLocals": true, yazilmis ama kullanilmamist parametre varsa hata döndür demek!
 
     // "rootDir":"src",
     //! Kaynak kodlarimizin nerede oldugnu belirtiyor.
