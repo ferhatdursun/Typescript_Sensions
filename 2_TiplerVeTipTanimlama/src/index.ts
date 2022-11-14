@@ -117,46 +117,10 @@ const dizi4: string[] | number[] | boolean[] = [];
 
 const dizi5: (number | boolean | string)[] = ["asda", 12, true, false]; //! Ama burada Symbol Type'i eklenemez. Eger number, boolean, string'den sonra Symbol yazarsak false'den sonrada Symbol ekleyebiliriz.
 
-const dizi6 = [] as Array<string>; //! Bu sekilde de type tanimlamasi yapilabilir.
+const dizi6 = [] as Array<string | number>; //! Bu sekilde de type tanimlamasi yapilabilir. Bu sekilde(kücüktür, büyüktür isaretleri icinde)tanimlama generic olarak adlandiriliyor.
 
 const myDizi: [string, string, number] = ["ferhat", "Dursun", 12]; //!Bunlar Tuple Type'i
 
-const [isim, soyad, yas] = myDizi; //! burada isim = string, soyad = string, yas = number
+const [isim, soyad, yas] = myDizi; //! burada isim = string, soyad = string, yas = number degeri aliyor.
 
-myDizi[2].toFixed; //! Type'i number. myDizi de 2'inci
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-let myname2: string | number;
-
-function change2() {
-  (myname2 = "asd"), (myname2 = 12);
-}
-
-function silCheck() {
-  if (b instanceof HTMLInputElement) b.COMMENT_NODE;
-}
-
-let sila: string = "a";
-
-let silnumber: number = 5;
-
-let silboolean: boolean = true;
-
-let silundefiend: undefined = undefined;
-
-let silsymbol: symbol = Symbol();
-
-const yeniPerson: {
-  silisim: string;
-  silSoyisim: string;
-  silYas: number;
-} = {
-  silisim: "Ferhat",
-  silSoyisim: "Dursun",
-  silYas: 30,
-};
-
-let silSehirler: "Bartin" | "Ankara" | "Istanbul" | "Dortmund";
-
-const stringdizisi: string[] = [];
+myDizi[2].toFixed; //! Type'i number. myDizi de index degeri 2´dir.
