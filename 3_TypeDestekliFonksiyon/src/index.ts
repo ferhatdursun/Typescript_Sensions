@@ -10,13 +10,23 @@ function Ferhat(): [number, string] {
   return [25, "asdasd"];
 }
 
+function silmeF() {
+  return [25, "asda"] as const; //! Burada ki as const ile silmeF() readonly oldu!
+}
+
+const asd = silmeF();
+
 const qwe = F();
+
+//!
 
 function LogPerson(isim: string, soyisim: string, yas: number) {
   console.log({ isim, soyisim, yas });
 }
 
 LogPerson("Kadir", "Yazici", 20);
+
+//!
 
 function yazmaca(isim: string, tekrar: number): void {
   for (let i = 0; i < tekrar; i++) {
