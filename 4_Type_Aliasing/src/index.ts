@@ -1,3 +1,4 @@
+import { type } from "os";
 import { toNamespacedPath } from "path";
 import { addAbortSignal } from "stream";
 
