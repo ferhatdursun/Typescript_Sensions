@@ -9,7 +9,7 @@
 const a = 33;
 console.log({ a });
 //! Typescript ile degisken yazarken ona Type(const, let) vermeye gerek yok. Typescript bunu kendisi otamatik olarak yapiyor.
-let myname = 'asda';
+let myname = "asda";
 //! Variablelarda iki nokta üst üste Type tanimlamadir.
 //? string ile number arasinda ki | yada demektir.
 myname = "qwe";
@@ -21,7 +21,8 @@ function change() {
     name = 12;
 }
 function check() {
-    if (typeof name === 'string') {
+    if (typeof name === "string") {
         name.toUpperCase;
     }
 }
+const c = undefined;

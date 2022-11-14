@@ -16,7 +16,7 @@
 
     "esModuleInterop": false,
 
-    "outDir": "dist" //! Ciktilari Dist klasörüne verecek
+    "outDir": "./dist",
 
     // "rootDir":"src",
     //! Kaynak kodlarimizin nerede oldugnu belirtiyor.
