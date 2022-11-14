@@ -8,6 +8,10 @@
 
 //? node dist/index.js bu kod ile index.js'in icinde yazanlari terminalde görebiliriz.
 
+
+//? typeof c === "" yazarsak tirnak icerisinde bütün typelari görebiliriz.
+
+
 const a = 33;
 console.log({ a });
 
