@@ -18,15 +18,12 @@
 
     "outDir": "dist", //! Ciktilari Dist klasörüne verecek
 
-    "rootDir": "src",
+    "rootDir": "src", //! Kaynak kodlarimizin nerede oldugnu belirtiyor.
 
     "declaration": true,
 
-    "noUnusedParameters": true
-
-    //! "noUnusedLocals": true, yazilmis ama kullanilmamist parametre varsa hata döndür demek!
+    "noUnusedParameters": true //! "noUnusedLocals": true, yazilmis ama kullanilmamist parametre varsa hata döndür demek!
 
     // "rootDir":"src",
-    //! Kaynak kodlarimizin nerede oldugnu belirtiyor.
   }
 }
