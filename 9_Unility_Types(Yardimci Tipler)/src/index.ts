@@ -126,4 +126,13 @@ function geriyeSayiDöndür() {
     return 25;
 }
 
-const myValue: ReturnType<typeof geriyeSayiDöndür> = 25; //! bu sekilde fonksiyonun degerini alabiliyoruz.
+const myValue: ReturnType<typeof geriyeSayiDöndür> = 35; //! bu sekilde buraya type´i number olan bir deger tanimlayabiliyoruz! return 25 oldugundan dolayi!!!
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!
+
+function geri() {
+  return "ferhat";
+}
+
+const benimValue: ReturnType<typeof geri> = "ahmet";
