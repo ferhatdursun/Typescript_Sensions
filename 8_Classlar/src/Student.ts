@@ -14,6 +14,8 @@ export interface IStudent {
     }
 }
 
+// implements konusu icin 8. Videoya bak
+
 export class Student{
     public isim = "ferhat" //! Burada ki isim publictir. Public yazmaya gerek yok. Yani diger sayfalarda import edilirse o sayfada da kullanilabilir.
     private nachname = "Dursun" //! Burada ki nachname basinda public ve birsey yazmadigi sürece publictir. Ama suanda private. Yani diger sayfalardan buraya ulasilamaz.
@@ -22,12 +24,13 @@ export class Student{
     //? ve basinda # olanlara sadece class icerisinden erisilebiliniyor. class disindan erisilemiyor.
     private Takim = "Besiktas" //! static`in özelligi ise class disindan direkt olarak ulasilabiliniyo olmasi.
     static #yemek= "Musakka"
-        constructor(isim:string, nachname:string){ //? staticler constructor icinde tanimlanamaz. Class"in hemen altinda tanimlanir.
+        constructor(isim:string, soyad: string, sinif: number){ //? staticler constructor icinde tanimlanamaz. Class"in hemen altinda tanimlanir.
         console.log(this.#memleket);
         this.isim; //! Burada ki this ile kast edilen Student class´i ve bu this ile class icinde tanimlananlara ulasabiliyoruz.
         this.nachname;
         Student.#yemek //! static olanlara class icerisinde bu sekilde ulasilabilinir.
-     }
+    }
+
      yazdir(){
         console.log({
             isim: this.isim,
@@ -37,6 +40,9 @@ export class Student{
 
      }
 }
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 
 
