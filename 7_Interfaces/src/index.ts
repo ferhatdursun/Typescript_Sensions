@@ -55,6 +55,8 @@ const anotherfunction: IAnotherFunction = () => {
 };
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 interface MongoResponse {
   _id: string;
@@ -108,3 +110,107 @@ const obj: IStudent = {
     }
   }
 }
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+interface IsilPerson {
+  isim: string,
+  soyad: string,
+  [key: string]: any;
+}
+
+const Ferhat: Person = {
+  isim: "ferhat",
+  soyad: "Dursun",
+  memleket: "Bartin"
+}
+
+const silIsim: IsilPerson["soyad"] = "Dursun"
+
+
+interface IsilMyArray {
+  [index: number]: string | number;
+}
+
+const IsilArray: MyArray = ["kadir", 25]
+
+
+
+interface IFunction {
+  (isim: string, tekrar: number): void;
+  (isim: string, tekrar: number, memleket: string): void;
+}
+
+interface IAnotherFunction extends IFunction {
+  (yas: number, tekrar: boolean, memleket: string): void;
+}
+
+
+interface ISilStudent {
+  isim: string;
+  soyisim: string;
+  sinif: number;
+  silgetStudentInformation(): {
+    isim: ISilStudent["isim"];
+    soyisim: ISilStudent["soyisim"];
+    sinif: ISilStudent["sinif"];
+  }
+}
+
+const silObj: ISilStudent = {
+  isim: "kadir",
+  sinif: 15,
+  soyisim: "Yazici",
+
+  silgetStudentInformation() {
+    return {
+      isim: this.isim,
+
+      sinif: this.sinif,
+
+      soyisim: this.soyisim
+    }
+  }
+}
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+interface ISilBeni {
+  silisim: string,
+  silsoyisim: string,
+  silyas: number,
+  
+  silGetBenimInformationum(): {
+    silisim: ISilBeni["silisim"];
+    silsoyisim: ISilBeni["silsoyisim"];
+    silyas: ISilBeni["silyas"];
+  }
+}
+
+
+const silbilgi: ISilBeni = {
+  silisim: "Fero",
+  silsoyisim: "Dursun",
+  silyas: 30,
+
+  silGetBenimInformationum() {
+    return {
+      silisim: this.silisim,
+      silsoyisim: this.silsoyisim,
+      silyas: this.silyas
+    }
+  }
+}
+
+
+
