@@ -8,7 +8,7 @@
 //     Warning,
 
 //     Information
-// }
+// } //! Enumlar readonlydirler!
 
 //! Symboller daha güvenilirlerdir. Ama enumlar gibi iki farkli(hem tarayici hem server) yerde kullanilamiyor.
 const Notification = {
@@ -61,6 +61,6 @@ function sendNotification(notificationType: keyof typeof Notification) {
   }
 }
 
-Notification.Success.valueOf(); //! Bu sekilde enumlarin Type´ni da alabiliriz.
+Notification.Success.valueOf(); //! Bu sekilde enumlarin value degerini alabiliriz.
 
 sendNotification("Error");
