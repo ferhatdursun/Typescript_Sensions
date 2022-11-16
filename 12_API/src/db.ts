@@ -1,3 +1,3 @@
-import { TodoItem } from "./types";
+import { ITodoItem } from "./types";
 
-export const db: TodoItem[] = [];
+export const db: ITodoItem[] = [];

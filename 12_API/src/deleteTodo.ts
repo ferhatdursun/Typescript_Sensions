@@ -1,6 +1,6 @@
 import {Handler} from "express";
 import { db } from "./db";
-import { SuccessResponse } from "./types";
+import { ISuccessResponse } from "./types";
 
 //deleteTodo/:id
 
@@ -14,5 +14,5 @@ export const deleteTodo: Handler = (req, res) => {
     }
     return res.status(200).send({
         msg: `ID si ${id} olan basarili bir sekilde silindi`
-    } as SuccessResponse)
+    } as ISuccessResponse)
 }

@@ -5,14 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const addTodo_1 = require("./addTodo");
-const getTodos_1 = require("./getTodos");
 const deleteTodo_1 = require("./deleteTodo");
+const getTodos_1 = require("./getTodos");
 const toggleTodo_1 = require("./toggleTodo");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.post("/add", addTodo_1.addTodo);
+app.post("/add", addTodo_1.getTodo);
 app.get("/todos", getTodos_1.getTodos);
-app.delete("/delete/:id", deleteTodo_1.deleteTodo);
+app.delete("/deleteTodo/:id", deleteTodo_1.deleteTodo);
 app.post("/toggleTodo/:id", toggleTodo_1.toggleTodo);
 app.listen(4000, () => {
     console.log("server is up on http://localhost:4000");

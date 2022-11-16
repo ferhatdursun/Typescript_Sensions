@@ -1,6 +1,6 @@
 import { Handler } from "express";
 import { db } from "./db";
-import { SuccessResponse } from "./types";
+import { ISuccessResponse } from "./types";
 
 //toggleTodo/:id
 export const toggleTodo: Handler = (req, res) => {
@@ -11,5 +11,5 @@ export const toggleTodo: Handler = (req, res) => {
   }
   return res.status(200).send({
     msg: `ID"si  ${id} olan basarili bir sekilde togglandi.`
-  } as SuccessResponse);
+  } as ISuccessResponse);
 };

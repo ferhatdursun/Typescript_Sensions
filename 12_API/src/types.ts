@@ -1,5 +1,5 @@
 // TODO define name with IXXXX
-export interface TodoItem {
+export interface ITodoItem {
 
     text: string,
 
@@ -10,10 +10,10 @@ export interface TodoItem {
 }
 
 
-export interface TodoRequestBody extends Pick<TodoItem, "text"> {}
+export interface ITodoRequestBody extends Pick<ITodoItem, "text"> {}
 
 
-export interface SuccessResponse {
+export interface ISuccessResponse {
     msg: string;
-    payload: TodoItem;
+    payload: ITodoItem;
 }

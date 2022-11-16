@@ -13,7 +13,7 @@ app.post("/add", addTodo);
 
 app.get("/todos", getTodos);
 
-app.delete("/delete/:id", deleteTodo)
+app.delete("/deleteTodo/:id", deleteTodo)
 
 app.post("/toggleTodo/:id", toggleTodo)
 
