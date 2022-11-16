@@ -25,6 +25,7 @@
     // "declaration": true, //! bu komut true ise bununla birlikte d.ts dosyalari da geliyor.
   },
   "include": ["src/**/*"], //! **; src´nin icinde ki herseyi(file oder folder). *; **´nin oldugu yerde folder varsa bunun icinde ki hersey.
-  //! "include": ["src/**/*.ts], bu sekilde de yazabiliriz! Bu da .ts uzantili tüm dosyalar anlamina gelmektedir!!
+//! "include": ["src/**/*.ts"], bu sekilde de yazabiliriz! Bu da .ts uzantili tüm dosyalar anlamina gelmektedir!!
+//! "include": ["src/**/*.(ts|js)"], bu sekilde de sadece ts ve js uzantili tüm dosyalara bak anlamina geliyor!
   "exclude": ["node_modules"] //! exclude; bu dosyalari derleme demektir.
 }
