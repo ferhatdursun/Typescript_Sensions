@@ -23,7 +23,7 @@ type FD = tooArray<string>; //! Buraya sadece string, number, boolean type´i ya
 
 //!!!!!!!!! Soru > Kosullu Typelandirma nasil yapilir?
 
-type tooArray3<T> = T extends string | number | boolean ? T[] : never;
+type tooArray3<T> = T extends string | number | boolean ? T[] : never; //! Türüyor ise bana T[] döndür. Türümüyorsa never döndürme.
 
 type örnek3 = tooArray3<string | number> //! Burada string ve number yerine sadece 1 tane [] yazarsak let R:örnek3 oldugunda R. yapinca hicbirsey gelmez. 
 
