@@ -1,3 +1,22 @@
+let c = <string>"selamlar";
+
+
+
+interface Student {
+  name: string;
+
+  class: number;
+}
+
+//! Bu sekilde kullanim daha garanti bir yöntem.
+const myObject1: Student = {
+  name: "Ferhat",
+  class: 10
+}
+
+
+
+
 const myArray: [number, string] = [25, "kadir"];
 
 const myObject: {
@@ -26,9 +45,13 @@ const degismez = Object.freeze([25, "kadir"]); //! Sadece readonly dir. Deswegen
 
 
 
-const Dize = [25, "kadir"] as const; //? as const dan dolayi bu artik bir degismezdir. Ve bu bir tupledir.
+const dize = [25, "kadir"] as const; //? as const dan dolayi bu artik bir degismezdir. Ve bu bir tupledir.
+const dize2 = <const>[25, "ferhat"] //? Burada ki <const> dan dolayi readonly oldu.
+const Dize2 = <const>[25, "kadir"]; //! Yukarida ki Dize tuple´i bu sekilde de tanimlanabilir.
 
-    const Dize2 = <const>[25, "kadir"]; //! Yukarida ki Dize tuple´i bu sekilde de tanimlanabilir.
+
+
+
 
 function isExisting<T extends any[] | readonly any[]>(array: T, child: any): [boolean, number] { //! Burada :[boolean, number] yazdigim icin isExisting type olarak sadece bu ikisinden türetilebilir.
     const index = array.findIndex((value) => value === child); //? child valuenin icinde varsa, childden index numarasini bulucaz. Child valuenin icinde yoksa, bize -1 döndürecek.
