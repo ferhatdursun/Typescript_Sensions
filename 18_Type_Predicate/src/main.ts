@@ -1,27 +1,42 @@
-function myFunction(a: number, b: string, c: boolean) {
-    return 100;
+function main(arg: any) {
+  if (isArray(arg)) {
+  }
 }
 
-//! spread syntax für ...
-type ReturnT<T> = T extends (...args: any[]) => infer C ? C: never;
-//? ilk satırda bir tür belirledik ve bu türün array tipinden mi türetildiğini kontrol ettik.
-//? Infer keywordu ile eğer arrayden türetildi ise o türü, türetilmedi ise never türünü döndürüyoruz.
+function isArray(arg: any): arg is any[] {
+  if (arg instanceof Array) {
+    return true;
+  }
+  return false;
+}
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+class Person {
+  private id: string;
 
-type FirstParameterType<T extends (...arg: any[]) => any> = T extends (
-    firstArg: infer F,
+  constructor(public name: string, public surname: string) {
+    this.id = Math.random().toString();
+  }
+}
 
-    ...args: any[]
-
-) => unknown
-
-    ? F
+function main2(arg: any) {
+  //! arg´nin person class´indan olusup olusmadigini kontrol etmek icin!!!
+  if (arg instanceof Person) {
+      arg.name;
+      arg
+    }
     
-    : never;
+}
 
+//! oder
 
-type MyFunctionFirstParameter = FirstParameterType<typeof myFunction>;
-//! MyFunctionFirstParameter; Yukarida ki myFunction icinde ki ilk argümanin typeni aliyor.
-//! Yani a:number ise MyFunctionFirstParameter: number, a: string ise MyFunctionFirstParameter:string oluyor.
+function isPerson(arg: any): arg is Person { //! classlarin type´i kendisidir!!!
+    if (arg instanceof Person) {
+        return true;
+    }
+    return false;
+}
