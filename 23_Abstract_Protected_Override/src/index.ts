@@ -70,8 +70,9 @@ player2.x //! Bu sekilde x ve y´ye erisebiliyoruz.
 
 
 class Pembe {
-    private constructor(public x: number, public y: number) {
-        //! Eger burada constructor private olursa Player14 icinden buraya ulasamayiz!!! Pembenin kendi icinde ulasabiliriz ama disaridan buraya ulasamayiz!!!
+    constructor(public x: number, public y: number) { //? Basina private ekle!!
+      //! Eger burada constructor private olursa new ile cagiramayiz!!
+      //! Eger burada constructor private olursa Player14 icinden buraya ulasamayiz!!! Pembenin kendi icinde ulasabiliriz ama disaridan buraya ulasamayiz!!!
     }
 
     public static create() {
