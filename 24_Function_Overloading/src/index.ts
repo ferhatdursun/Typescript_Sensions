@@ -9,8 +9,7 @@ function logger<T extends string | number | symbol>(
 
   return 1 as any;
 }
-
-logger(Symbol());
+logger("fer");
 //! Burada logger icinde ne cagirilirsa(number, string oder Symbol) function logger ona göre islem yapiyo.
 //! Deger verdikten sonra logger´in üstüne gelerek görebilirsin.
 //! Yani bir nevi dinamik bir yapi olusturduk!
@@ -30,7 +29,7 @@ logger(Symbol());
 
 function logger2(): void;
 function logger2(a: number): number[];
-function logger2<T>(a: T[], map?: (el: T) => void): void;
+function logger2<T>(a: T[], map?: (el: T) => void): void; //!   ? isaretiyle map´i optional yaptik!!!
 function logger2<T>(a?: number | string | T[], map?: (item: T) => void) {
     if (a == null) {
       return;
