@@ -14,3 +14,6 @@ function display(id: any, name: string) {
     console.log("id = " + id + ", Name =" + name);   
 }
 
+
+let firstNames: (string| number)[] = ["Ferhat", "Dursun", "Serafettin", 20]
+

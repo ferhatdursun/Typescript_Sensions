@@ -10,3 +10,4 @@ console.log(isimSoyisim);
 function display(id, name) {
     console.log("id = " + id + ", Name =" + name);
 }
+var firstNames = ["Ferhat", "Dursun", "Serafettin", 20];
