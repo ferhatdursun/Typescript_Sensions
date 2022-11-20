@@ -214,9 +214,24 @@ interface IMyPerson{
 
 let myEmployee = <IMyPerson> {}   //! Burada <myPerson> ekledigimiz icin alt satirda name tanimlamasi yaparken myPerson interface'inin typelarini kullaniyoruz!!! Bu interface de ki strakcir yapisi gecerli olmus oldu.
 console.log(typeof myEmployee);
-myEmployee.name = "Can";
+myEmployee.name = "Soncay"; //! <IMyPerson> yazidigizdan dolayi burada ki name atamamiz gecerli hale geldi!
+console.log("myEmployee:",myEmployee);
 
 
+
+//? Data_Type_Casting
+
+const clueless: unknown = "1";
+console.log(typeof clueless);
+
+const clueNum: number = <number>clueless; //! Burada clueNum diye yeni bir degisken tanimladik ve clueless´in type´ini number yaptik. Bu islem Castin olarak adlandiriliyor.
+console.log(clueNum); //! Bunu yazdirinca 1(type number olarak) aliyoruz
+
+
+//? 2. yöntem (for Casting) 
+const clueNumPreferred = clueless as string //! Bu sekilde de as ile clueless´in type´i number olmus oluyor. consolede bunu da number 1 olarak görebiliriz!
+console.log("Yazdir;",typeof clueNumPreferred);
+console.log("Yazdir2;", clueNumPreferred);
 
 
 
