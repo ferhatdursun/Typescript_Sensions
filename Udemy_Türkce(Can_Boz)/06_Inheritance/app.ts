@@ -11,13 +11,34 @@ class Person {
     }
 
     getFullName() {//! Class icinde function tanimlama ve kullanma
-        return `${this.id}${this.firstName}${this.lastName}`
+        return `${this.id} ${this.firstName} ${this.lastName}`
     }
 }
+class Employee extends Person {
+    //! Burada parent'in(class Person) constructor'ina ulasabilmek icin super kullaniyoruz!!!
+    constructor(
+        id: number,
+        firstName: string,
+        lastName: string
+    ) {
+        super(id, firstName, lastName) //? super ile burada parent(class Person) classinin constructorunu tetikliyoruz!!!
+        //? Daha sonra class Personun constructoru class Person() un degerlerini aliyor(id, firstName, lastName) ve this.id .firstName .lastName olarak bunlari inheritance(miras aliyoruz) ediyoruz! Yani deger atmasini gerceklestiriyoruz!!!
+        //? Ve daha sonra baska metotlarla bunlara ulasabiliyorum.
+    }
+}
+let employee = new Employee(29, "Can", "Boz"); //? employee ilk olarak class Employee constructor'a gidiyor. Bunu parentdan extends ettigimiz icin super ile parent'in(class Person) constructor'una geciyoruz!! ve orada id, firstName, lastName degerlerini inheritance ettikten sonra artik bunlari heryerde kullanabiliyoruz!!!
+console.log("employee:", employee);
+console.log("employee.getFullName:", employee.getFullName());
 
-let kisibilgilerim = new Person(43, " Ahmet ", "Cosar") //! Burasinin calismasi icin class icinde ki getFullName'in yorumdan cikartilmasi gerek miyor.
-console.log(kisibilgilerim);
 
-console.log(kisibilgilerim.getFullName());
+
+
+
+
+let kisibilgim = new Person(43, "Can", "Boz")
+kisibilgim.id = 5;
+
+console.log("kisibilgim.id: ",kisibilgim.id);
+
 
 
