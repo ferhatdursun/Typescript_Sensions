@@ -17,8 +17,6 @@ bastir();
 
 
 //! Beispiel
-
-
 function birlestir(ad: string, soyad: string) {
   return ad + "/" + soyad;
 }
@@ -29,8 +27,6 @@ console.log(degisken);
 
 
 //! Beispiel Default_Parameters
-
-
 function defaultParameters(ad: string, soyad:string = "Kaymaz") { //! Burada tanimlama yaptigimiz icin asagida fonksiyonu cagirirken tek parametre verebiliriz!!! Burada ki önceden tanimlanmis olan 2. parametre otomatik olarak ekleniyor!!! Eger alt tarafta da ikinci parametreyi verirsek, 2. 1. yi eziyor!!!
   return ad + "?" + soyad;
 }
@@ -61,8 +57,8 @@ function arrowCarpim(ac: number, ab: number): number {
   return ac * ab;
 }
 
-//! bu function'u arrow function halinde yazicaz!!
 
+//! bu function'u arrow function halinde yazicaz!!
 let arrowCarpim2 = (a: number, b: number): number => {
   return a * b;
 //! bu sekilde kisaltabiliriz!!
@@ -76,8 +72,6 @@ console.log("myArrowCarpim2;", myArrowCarpim2);
 
 
 //!!
-
-
 let Print = () => {
   console.log("Print");
 }
@@ -86,4 +80,37 @@ Print()
 let Yazdir = console.log("Yazdir"); //! Bu üstte ki let Print'in kisa yazim tarzi!!!
 
   
+//! Function Overloading
 
+function add2(a: number, b: number): number;
+function add2(a: string, b: string): string;
+//! Ilk olarak bu ikisinde yapacagimiz islemleri tanimliyoruz. Daha sonra altta ki gibi function any type ile tanimliyoruz. Ve suanda add2() function number degeri de string degeri de alsa fark etmiyor, calisiyor!!!
+
+
+function add2(a: any, b: any): any {
+  return a + b;
+}
+
+let degisken2 = add2(5, 5)
+console.log(degisken2);
+
+
+
+//! REST PARAMETERS
+function toplam2(a: string, ...numbers: number[]):number {//! Burada ki ...numbers ist Rest Parameters. Ve ne kadar number degerler verirsek verelerim numbers'in icinde tutulacak!!!
+  console.log("toplam2/a;",a);
+  let total = 0;
+  numbers.forEach((num) => total += num);
+  return total; 
+}
+
+console.log(toplam2("Can", 20, 30));
+
+
+
+//! Beispiel rest parameters
+function birlestir2(message: string, ...names: string[]) {
+  console.log(message + " " + names.join(", "));
+  
+}
+birlestir2("Selam", "Ali", "Ahmet", "Soncay")

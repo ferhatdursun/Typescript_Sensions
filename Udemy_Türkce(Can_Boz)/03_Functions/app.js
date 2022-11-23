@@ -53,3 +53,30 @@ var Print = function () {
 };
 Print();
 var Yazdir = console.log("Yazdir"); //! Bu üstte ki let Print'in kisa yazim tarzi!!!
+//! Ilk olarak bu ikisinde yapacagimiz islemleri tanimliyoruz. Daha sonra altta ki gibi function any type ile tanimliyoruz. Ve suanda add2() function number degeri de string degeri de alsa fark etmiyor, calisiyor!!!
+function add2(a, b) {
+    return a + b;
+}
+var degisken2 = add2(5, 5);
+console.log(degisken2);
+//! REST PARAMETERS
+function toplam2(a) {
+    var numbers = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        numbers[_i - 1] = arguments[_i];
+    }
+    console.log("toplam2/a;", a);
+    var total = 0;
+    numbers.forEach(function (num) { return total += num; });
+    return total;
+}
+console.log(toplam2("Can", 20, 30));
+//! Beispiel rest parameters
+function birlestir2(message) {
+    var names = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        names[_i - 1] = arguments[_i];
+    }
+    console.log(message + " " + names.join(", "));
+}
+birlestir2("Selam", "Ali", "Ahmet", "Soncay");
