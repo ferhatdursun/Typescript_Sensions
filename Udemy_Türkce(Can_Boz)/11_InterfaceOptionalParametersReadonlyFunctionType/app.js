@@ -6,8 +6,13 @@ function getFullName(person) {
 }
 var person = {
     firstName: "Can",
-    lastName: "Boz",
-    middleName: "Ferhat",
-    age: 29
+    lastName: "Boz"
 };
+person.firstName = "Ferhat";
+//! let person a Person type atamasi yaptigimizdan dolayi ve firstname Person icersinde readonly olarak tanimlandigindan dolayi burada degistirmeye izin vermiyor.
 console.log(getFullName(person));
+var format;
+format = function (str, isUpper) {
+    return isUpper ? str.toLocaleUpperCase() : str.toLowerCase();
+};
+console.log(format("Ferhat Dursun", true));
