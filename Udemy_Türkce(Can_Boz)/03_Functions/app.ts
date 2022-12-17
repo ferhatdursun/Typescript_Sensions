@@ -112,5 +112,12 @@ console.log(toplam2("Can", 20, 30));
 function birlestir2(message: string, ...names: string[]) {
   console.log(message + " " + names.join(", "));
   
-}
+} 
 birlestir2("Selam", "Ali", "Ahmet", "Soncay")
+
+
+
+
+
+
+
